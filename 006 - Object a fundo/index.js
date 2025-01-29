@@ -39,3 +39,7 @@ let Tenis = {
         return this.marcaArrayObj[param].nome;
     },
 }
+
+console.log(Tenis);
+console.log(Tenis.tipo);
+console.log(Tenis.tamanho);
