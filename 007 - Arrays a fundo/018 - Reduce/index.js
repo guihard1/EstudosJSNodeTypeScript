@@ -3,13 +3,15 @@ const pedidos = [
     id: 420,
     nome: "Luiz Guilherme",
     alimento: "pizza",
-    bebida: "agua",
+    bebida: "refrigerante",
+    preco: 20,
   },
   {
     id: 153,
     nome: "Maria",
     alimento: "hamburguer",
     bebida: "refrigerante",
+    preco: 25,
   },
   { id: 29, nome: "Joaquim", alimento: "coxinha", bebida: "Suco de Uva" },
   {
@@ -17,19 +19,17 @@ const pedidos = [
     nome: "Carlos",
     alimento: "Churrasco",
     bebida: "Cerveja",
+    preco: 30,
   },
   { id: 55, nome: "Rogério", alimento: "Feijoada", bebida: "energético" },
 ];
 
 /**
- * O método map além de iterar todo o Array ele é muito bom para editar o iterado (resumindo os dados do Array )
- **/
+ * A ideia dele é pegar todos os valores de um Array e transformar em um unico valor 
+**/
 
-pedidos.map((element, index) => {
-  //É bom pra percorrer elementos do array e alterar fazendo uma validação etc.
-  if (element.id === 29 && element.alimento === "coxinha") {
-    return (element.alimento = "kibe");
-  }
+const balancete = pedidos.reduce((total, element) => {
+  return total + element.preco;
+}, 0);
 
-  console.log(pedidos);
-});
+console.log(balancete);

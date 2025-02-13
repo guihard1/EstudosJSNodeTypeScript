@@ -3,7 +3,7 @@ const pedidos = [
     id: 420,
     nome: "Luiz Guilherme",
     alimento: "pizza",
-    bebida: "agua",
+    bebida: "refrigerante",
   },
   {
     id: 153,
@@ -21,15 +21,12 @@ const pedidos = [
   { id: 55, nome: "Rogério", alimento: "Feijoada", bebida: "energético" },
 ];
 
-/**
- * O método map além de iterar todo o Array ele é muito bom para editar o iterado (resumindo os dados do Array )
- **/
+/** 
+ 
+**/
 
-pedidos.map((element, index) => {
-  //É bom pra percorrer elementos do array e alterar fazendo uma validação etc.
-  if (element.id === 29 && element.alimento === "coxinha") {
-    return (element.alimento = "kibe");
-  }
-
-  console.log(pedidos);
+const existeAlimento = pedidos.some((element, index) => {
+  return element.alimento === "hamburguer";
 });
+
+console.log(existeAlimento);
